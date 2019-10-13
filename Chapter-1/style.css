@@ -13,7 +13,9 @@ body{
     box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.726);
 
 }
+
 #user-a{
+    display: none;
     position: absolute;
     height: 4rem;
     width: 6rem;
@@ -25,6 +27,7 @@ body{
     font-size: 2rem;
 }
 #arrow-a{
+    display: none;
     position: absolute;
     height: .5rem;
     width: 11rem;
@@ -37,6 +40,7 @@ body{
 }
 #triangle-right {
 
+    display: none;
     position: absolute;
 	width: 0;
     height: 0;
@@ -47,6 +51,7 @@ body{
 	border-bottom: 15px solid transparent;
 }
 #user-b{
+    display: none;
     position: absolute;
     height: 4rem;
     width: 6rem;
@@ -58,6 +63,7 @@ body{
     font-size: 2rem;
 }
 #arrow-b{
+    display: none;
     position: absolute;
     margin-top: 7rem;
     margin-left: 23.75rem;;
@@ -66,6 +72,7 @@ body{
     background: black;
 }
 #triangle-down {
+    display: none;
     position: absolute;
     margin-top: 18rem;
     margin-left: 23rem;
@@ -76,6 +83,7 @@ body{
 	border-top: 30px solid black;
 }
 #user-c{
+    display: none;
     position: absolute;
     height: 4rem;
     width: 6rem;
@@ -87,6 +95,7 @@ body{
     font-size: 2rem;
 }
 #arrow-c{
+    display: none;
     position: absolute;
     height: .5rem;
     width: 11rem;
@@ -97,7 +106,8 @@ body{
     border-bottom-right-radius: .5rem;
 }
 #triangle-left{
-position: absolute;
+    display: none;
+    position: absolute;
     width: 0;
     height: 0;
     margin-left: 8rem;
@@ -108,6 +118,7 @@ position: absolute;
 
 }
 #user-d{
+    display: none;
     position: absolute;
     height: 4rem;
     width: 6rem;
@@ -119,6 +130,7 @@ position: absolute;
     font-size: 2rem;
 }
 #block-1{
+    display: none;
     position: absolute;
     height: 2rem;
     width: 7rem;
@@ -128,6 +140,7 @@ position: absolute;
     border: 1px solid black;
 }
 #block-2{
+    display: none;
     position: absolute;
     height: 2rem;
     width: 7rem;
@@ -137,6 +150,7 @@ position: absolute;
     border: 1px solid black;
 }
 #block-3{
+    display: none;
     position: absolute;
     height: 2rem;
     width: 7rem;
@@ -146,6 +160,7 @@ position: absolute;
     border: 1px solid black;
 }
 #block-4{
+    display: none;
     position: absolute;
     height: 2rem;
     width: 7rem;
@@ -156,6 +171,7 @@ position: absolute;
 }
 #a-fas{
     /* font-size: 1.5rem; */
+    display: none;
     position: absolute;
     margin-top: 10rem;
     margin-left: 12.5rem;
@@ -163,6 +179,7 @@ position: absolute;
 }
 #b-fas{
     /* font-size: 1.5rem; */
+    display: none;
     position: absolute;
     margin-top: 13rem;
     margin-left: 12.5rem;
@@ -170,16 +187,21 @@ position: absolute;
 }
 #c-fas{
     /* font-size: 1.5rem; */
+    display: none;
     position: absolute;
     margin-top: 16rem;
     margin-left: 12.5rem;
     transform: rotate(138deg);
 }
-
 .showcase{
     background-color: aliceblue;
     height: 35rem;
     border-radius: .5rem;
     box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.726);
 }
-
+.o-btn{
+    display: block;
+    margin-top: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+}

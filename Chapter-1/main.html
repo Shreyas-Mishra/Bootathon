@@ -60,6 +60,12 @@
         </div>
     </nav>
     <!-- Navigation bar code ends -->
+
+
+
+
+
+
     <h1 class="text-center">Introduction to Blockchain</h1>
     <div class="grid-big">
         <grid class="row">
@@ -71,47 +77,48 @@
                           a blockchain is typically managed by a peer-to-peer network collectively
                          adhering to a protocol for inter-node communication and validating new blocks.">
                         Open Legder</h3>
-                    <button class="Show">Show</button>
-                    <button class="Show">Show</button>
+                    <button class="btn o-btn"  id="Show">Start</button>
+                    <button class="btn o-btn" style="display: none;"  id="pagain">Restart</button>
+                    <button class="btn o-btn disabled" id="b1">Create Genesis Block</button>
+                    <button class="btn o-btn" style="display: none;" id="b2">Create Block-2/Link-1</button>
+                    <button class="btn o-btn" style="display: none;" id="b3">Create Block-3/Link-2</button>
+                    <button class="btn o-btn" style="display: none;" id="b4">Create Block-4/Link-3</button>
                     <div class="ledger">
                         <div id="user-a" class="text-center">A</div>
-                        <div id="arrow-a"></div><div id="triangle-right"></div>
+                        <div id="arrow-a"></div>
+                        <div id="triangle-right"></div>
                         <div id="user-b" class="text-center">B</div>
-                        <div id="arrow-b"></div><div id="triangle-down"></div>
+                        <div id="arrow-b"></div>
+                        <div id="triangle-down"></div>
                         <div id="user-c" class="text-center">C</div>
-                        <div id="arrow-c"></div><div id="triangle-left"></div>
+                        <div id="arrow-c"></div>
+                        <div id="triangle-left"></div>
                         <div id="user-d" class="text-center">D</div>
-                        <div id="block-1">A<--$100</div><i class="fas fa-link " id="a-fas"></i>
-                        <div id="block-2">A-->B $40</div><i class="fas fa-link " id="b-fas"></i>
-                        <div id="block-3">B-->C $30</div><i class="fas fa-link " id="c-fas"></i>
-                        <div id="block-4">C-->D $10</div>
-
-                        
-
-
+                        <div id="block-1">A<--$100</div> <i class="fas fa-link " id="a-fas"></i>
+                                <div id="block-2">A-->B $40</div><i class="fas fa-link " id="b-fas"></i>
+                                <div id="block-3">B-->C $30</div><i class="fas fa-link " id="c-fas"></i>
+                                <div id="block-4">C-->D $10</div>
+                        </div>
                     </div>
-
                 </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="showcase">
-                    <h3 class="text-center" style="background: grey;border-radius: .5rem;height: 7%;"
-                        data-toggle="tooltip" data-placement="bottom" title="A distributed ledger is a type of database that is shared, replicated, 
+                <div class="col-md-4">
+                    <div class="showcase">
+                        <h3 class="text-center" style="background: grey;border-radius: .5rem;height: 7%;"
+                            data-toggle="tooltip" data-placement="bottom" title="A distributed ledger is a type of database that is shared, replicated, 
                     and synchronized among the members of a decentralized network. The distributed 
                     ledger records the transactions, such as the exchange of assets or data, 
                     among the participants in the network.">Distritbuted Ledger</h3>
 
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="showcase">
-                    <h3 class="text-center">Mining</h3>
+                    </div>
 
                 </div>
+                <div class="col-md-4">
+                    <div class="showcase">
+                        <h3 class="text-center">Mining</h3>
 
-            </div>
+                    </div>
+
+                </div>
         </grid>
     </div>
 
@@ -123,6 +130,102 @@
     <script src="https://kit.fontawesome.com/20246d5e04.js"></script>
 
     <script>
+
+        $('#Show').click(function () {
+            $('#b1').removeClass("disabled");
+            $('#user-a').show(500);
+            $('#Hide').show(500);
+            
+        });
+        $('#b1').click(function () {
+            if ($(this).hasClass('disabled')) {
+                alert('CLICKED, BUT DISABLED FIRST START!!');
+            } else {
+            $('#b1').hide(90);  
+            $('#b2').show(90);
+            $('#block-1').show(500);}
+
+        });
+        $('#b2').click(function () {
+            $('#a-fas').show(500);
+            $('#b2').hide(90);  
+            
+            $('#user-b').show(1000);
+            $('#arrow-a').show(500);
+            $('#triangle-right').show(500);
+            $('#b3').show(90);
+            $('#block-2').show(500);
+
+        });
+        $('#b3').click(function () {
+            $('#b3').hide(90);  
+            $('#b-fas').show(500);
+            $('#user-c').show(1000);
+            $('#arrow-b').show(500);
+            $('#triangle-down').show(500);
+            $('#block-3').show(500);
+            $('#b4').show(90);
+        });
+        $('#b4').click(function () {
+            $('#b4').hide(90);  
+            $('#c-fas').show(500);
+            $('#user-d').show(1000);
+            $('#arrow-c').show(500);
+            $('#triangle-left').show(500);
+            $('#block-4').show(500);
+            $('#Hide').show(500);
+            $('#Show').hide(100);
+            $('#pagain').show(100);
+        });
+        $('#pagain').click(function () {
+            $('#pagain').hide(300); 
+            $('#Show').show(300); 
+            $('#b1').addClass("disabled");
+            $('#b1').show(300); 
+            $('#c-fas').hide(500);
+            $('#user-d').hide(1000);
+            $('#arrow-c').hide(500);
+            $('#triangle-left').hide(500);
+            $('#block-4').hide(500);
+            $('#Hide').hide(500);
+            $('#b3').hide(300);  
+            $('#b-fas').hide(500);
+            $('#user-c').hide(1000);
+            $('#arrow-b').hide(500);
+            $('#triangle-down').hide(500);
+            $('#block-3').hide(500);
+            $('#b4').hide(500);
+            $('#a-fas').hide(500);
+            $('#b2').hide(300);  
+            $('#user-a').hide(500);            
+            $('#user-b').hide(1000);
+            $('#arrow-a').hide(500);
+            $('#triangle-right').hide(500);
+            $('#b3').hide(500);
+            $('#block-2').hide(500);
+            $('#b2').hide(500);
+            $('#block-1').hide(500);
+            
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
