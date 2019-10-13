@@ -14,7 +14,7 @@ body{
 
 }
 
-#user-a{
+.o-led #user-a{
     display: none;
     position: absolute;
     height: 4rem;
@@ -26,7 +26,7 @@ body{
     border: 2px solid black;
     font-size: 2rem;
 }
-#arrow-a{
+.o-led #arrow-a{
     display: none;
     position: absolute;
     height: .5rem;
@@ -38,7 +38,7 @@ body{
     border-bottom-left-radius: .5rem;
 
 }
-#triangle-right {
+.o-led #triangle-right {
 
     display: none;
     position: absolute;
@@ -50,7 +50,7 @@ body{
 	border-left: 30px solid black;
 	border-bottom: 15px solid transparent;
 }
-#user-b{
+.o-led #user-b{
     display: none;
     position: absolute;
     height: 4rem;
@@ -62,7 +62,7 @@ body{
     border: 2px solid black;
     font-size: 2rem;
 }
-#arrow-b{
+.o-led #arrow-b{
     display: none;
     position: absolute;
     margin-top: 7rem;
@@ -71,7 +71,7 @@ body{
     width: .5rem;
     background: black;
 }
-#triangle-down {
+.o-led #triangle-down {
     display: none;
     position: absolute;
     margin-top: 18rem;
@@ -82,7 +82,7 @@ body{
 	border-right: 15px solid transparent;
 	border-top: 30px solid black;
 }
-#user-c{
+.o-led #user-c{
     display: none;
     position: absolute;
     height: 4rem;
@@ -94,7 +94,7 @@ body{
     border: 2px solid black;
     font-size: 2rem;
 }
-#arrow-c{
+.o-led #arrow-c{
     display: none;
     position: absolute;
     height: .5rem;
@@ -105,7 +105,7 @@ body{
     border-top-right-radius: .5rem;
     border-bottom-right-radius: .5rem;
 }
-#triangle-left{
+.o-led #triangle-left{
     display: none;
     position: absolute;
     width: 0;
@@ -117,7 +117,7 @@ body{
 	border-bottom: 15px solid transparent;
 
 }
-#user-d{
+.o-led #user-d{
     display: none;
     position: absolute;
     height: 4rem;
@@ -129,7 +129,7 @@ body{
     border: 2px solid black;
     font-size: 2rem;
 }
-#block-1{
+.o-led #block-1{
     display: none;
     position: absolute;
     height: 2rem;
@@ -139,7 +139,7 @@ body{
     background: #73d2f3;
     border: 1px solid black;
 }
-#block-2{
+.o-led #block-2{
     display: none;
     position: absolute;
     height: 2rem;
@@ -149,7 +149,7 @@ body{
     background: #73d2f3;
     border: 1px solid black;
 }
-#block-3{
+.o-led #block-3{
     display: none;
     position: absolute;
     height: 2rem;
@@ -159,7 +159,7 @@ body{
     background: #73d2f3;
     border: 1px solid black;
 }
-#block-4{
+.o-led #block-4{
     display: none;
     position: absolute;
     height: 2rem;
@@ -169,7 +169,7 @@ body{
     background: #73d2f3;
     border: 1px solid black;
 }
-#a-fas{
+.o-led #a-fas{
     /* font-size: 1.5rem; */
     display: none;
     position: absolute;
@@ -177,7 +177,7 @@ body{
     margin-left: 12.5rem;
     transform: rotate(138deg);
 }
-#b-fas{
+.o-led #b-fas{
     /* font-size: 1.5rem; */
     display: none;
     position: absolute;
@@ -185,7 +185,7 @@ body{
     margin-left: 12.5rem;
     transform: rotate(138deg);
 }
-#c-fas{
+.o-led #c-fas{
     /* font-size: 1.5rem; */
     display: none;
     position: absolute;
@@ -199,7 +199,7 @@ body{
     border-radius: .5rem;
     box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.726);
 }
-.o-btn{
+.o-led .o-btn{
     display: block;
     margin-top: .5rem;
     margin-left: auto;
