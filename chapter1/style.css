@@ -1,5 +1,5 @@
 body{
-    background: #9fe8fa;
+    background: url(./img/background.png) repeat-x #fff;
 }
 .grid-big{
     margin: 3rem;
@@ -7,11 +7,7 @@ body{
     margin-bottom: 0;
 }
 .o-led{    
-    background-color: aliceblue;
-    height: 35rem;
     border-radius: .5rem;
-    box-shadow: 3px 3px 5px #fff4e0;
-
 }
 
 .o-led #user-a{
@@ -204,4 +200,9 @@ body{
     margin-top: .5rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+.navbar {
+    box-shadow: 0 0 32px rgba(0,0,0,0.08);
+    border-bottom:1px solid #e6e6e6;
 }
