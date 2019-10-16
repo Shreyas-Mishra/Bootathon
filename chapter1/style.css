@@ -325,3 +325,24 @@ body{
 .scene-heading:hover {
     color: #eee;
 }
+.disLedger-node {
+    font-size: 0.8rem;
+}
+
+.disLedger .card-header {
+    background: #fed86f;
+    color: #963;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+    font-style: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.disLedger .card-header:hover {
+    background: #58504b;
+    color: #fff;
+}
+
+.disledger-anims {
+    height: 18rem;
+    width: 100%;
+    position: relative;}
