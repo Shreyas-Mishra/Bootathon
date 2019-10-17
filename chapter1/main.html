@@ -66,7 +66,7 @@
             <br>
         </div>
         <div class="row">
-            <div class="col-11">
+            <div class="col-12">
                 <div id="chap-carasouel" class="carousel slide" data-interval="false" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -306,9 +306,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-1">
+                <!-- <div class="col-1">
 
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -319,7 +319,7 @@
         <script src="../js/ajax-lib-popper-1.12.9.js"></script>
         <script src="../js/bootstrap-js-4.0.js"></script>
         <script src="https://kit.fontawesome.com/20246d5e04.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
 
         <script>
 
@@ -406,13 +406,140 @@
 
             });
 
+            const COLORS = {
+                white: '#ffffff',
+                black: '#000000',
+                green: '#49F2CC',
+                pink: '#777',
+                grey: '#29363B',
+                cyan: 'cyan',
+                yellow: '#FFE202',
+                hotpink: 'deeppink',
+            };
+
+            const y = -35;
+
+            class Sparks extends mojs.CustomShape {
+                getShape() { return '<path d="M11.8274713,76.9078071 C11.8274713,76.9078071 2.16693973,42.95046 30.0687526,21.2517012"></path><path d="M25.7538383,77.4836394 C25.7538383,77.4836394 20.7413252,19.6928312 92.8457655,18.1298659"></path><path d="M29.8949928,85.1781099 C29.8949928,85.1781099 41.4904038,48.3985179 81.1308462,59.416066"></path>'; }
+            }
+            mojs.addShape('sparks', Sparks);
+
+
+            const pinkSquare = new mojs.Transit({
+                shape: 'rect',
+                stroke: COLORS.hotpink,
+                strokeWidth: 40,
+                angle: { '-240': 0 },
+                radius: 20,
+                parent: '#disledger-anims',
+                scale: { 0: 2 },
+                duration: 872,
+                fill: 'none',
+                easing: 'expo.out',
+                y
+            });
+
+            const SPARKS_OPTS = {
+                shape: 'sparks',
+                parent: pinkSquare.el,
+                radius: 15,
+                left: '130%',
+                top: '25%',
+                fill: 'none',
+                strokeWidth: { 10: 0 },
+                stroke: 'yellow',
+                strokeDasharray: '75',
+                strokeDashoffset: { '75': '-75' },
+                duration: 900,
+                easing: 'cubic.out',
+                strokeLinecap: 'round',
+                isForce3d: true
+            }
+
+            const sparks1 = new mojs.Shape({
+                ...SPARKS_OPTS,
+                left: '125%',
+                top: '25%',
+                angle: 80,
+            });
+
+            const sparks2 = new mojs.Shape({
+                ...SPARKS_OPTS,
+                top: '125%',
+                left: '80%',
+                angle: 165,
+            });
+
+            const sparks3 = new mojs.Shape({
+                ...SPARKS_OPTS,
+                top: '75%',
+                left: '-25%',
+                angle: 250,
+            });
+
+            const sparks4 = new mojs.Shape({
+                ...SPARKS_OPTS,
+                top: '-25%',
+                left: '20%',
+                angle: 330,
+            });
+
+
+
+            const timeline = new mojs.Timeline({ speed: 0.6 });
+            timeline
+                .add(
+                    pinkSquare,
+                    sparks1,
+                    sparks2,
+                    sparks3,
+                    sparks4
+                );
+
             $(document).ready(function () {
                 $('[data-toggle="tooltip"]').tooltip();
-                // const burst = new mojs.Burst({
-                //     radius: { 0: 100 },
-                //     count: 5,
-                //     degree: 30
-                // }).play();
+                setTimeout(() => {
+                    timeline.play();
+                }, 200)
+
+                const shiftCurve = mojs.easing.path('M0,100 C50,100 50,100 50,50 C50,0 50,0 100,0');
+
+                curve = new mojs.Shape({
+                    shape: 'curve',
+                    points: 11,
+                    radius: 150,
+                    radiusY: 50,
+                    left: '30%',
+                    top: '13rem',
+                    angle: -40,
+                    fill: 'none',
+                    stroke: 'deeppink',
+                    parent: '#disledger-anims',
+                    isShowStart: true,
+                    strokeDasharray: '100%',
+                    strokeDashoffset: { '-100%': '0', easing: 'cubic.in' },
+                    duration: 2500,
+                    repeat: 0
+                }).play();
+
+                curve = new mojs.Shape({
+                    shape: 'curve',
+                    points: 11,
+                    radius: 150,
+                    radiusY: 50,
+                    left: '70%',
+                    top: '13rem',
+                    angle: 40,
+                    fill: 'none',
+                    stroke: 'deeppink',
+                    parent: '#disledger-anims',
+                    isShowStart: true,
+                    strokeDasharray: '100%',
+                    strokeDashoffset: { '100%': '0', easing: 'cubic.in' },
+                    duration: 2500,
+                    repeat: 0
+                }).play();
+               
             });
             
         </script>
