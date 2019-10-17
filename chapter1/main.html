@@ -69,7 +69,7 @@
             <div class="col-12">
                 <div id="chap-carasouel" class="carousel slide" data-interval="false" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item">
+                        <div class="carousel-item active">
                             <div class="scene">
                                 <div class="scene-heading" data-toggle="tooltip" data-placement="right" title="It is an open, distributed ledger that can record transactions between two parties
                                 efficiently and in a verifiable and permanent way. For use as a distributed ledger,
@@ -103,6 +103,7 @@
                                                 <div id="block-3">B-->C $30</div><i class="fas fa-link " id="c-fas"></i>
                                                 <div id="block-4">C-->D $10</div>
                                         </div>
+                                        <div class="strt-line"></div>
                                         <div class="step-1 instructions typewriter">
                                             1. The rpocess starts.
                                         </div>
@@ -122,7 +123,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item active">
+                            <div class="carousel-item">
                                 <div class="scene">
                                     <div class="scene-heading">
                                         Distributed Ledger
@@ -258,7 +259,7 @@
                 $('#b1').removeClass("disabled");
                 $('#user-a').show(500);
                 $('#Hide').show(500);
-                $('.step-2').show(1000);
+                $('.step-1').show(1000);
 
             });
             $('#b1').click(function () {
@@ -267,7 +268,7 @@
                 } else {
                     $('#b1').hide(90);
                     $('#b2').show(90);
-                    $('.step-3').show(1000);
+                    $('.step-2').show(1000);
                     $('#block-1').show(500);
                 }
 
@@ -276,7 +277,7 @@
                 $('#a-fas').show(500);
                 $('#b2').hide(90);
 
-                $('.step-4').show(1000);
+                $('.step-3').show(1000);
                 $('#user-b').show(1000);
                 $('#arrow-a').show(500);
                 $('#triangle-right').show(500);

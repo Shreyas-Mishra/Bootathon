@@ -192,34 +192,42 @@ body{
 .o-led .instructions{
     position: absolute;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 120%;
+    font-size: 140%;
     /* text-align: center; */
     white-space: nowrap;
     overflow: hidden;
 }
 .step-1{
-    margin-top: 2%;
+    position: absolute;
+    margin-top: -22%;
+    display: none;
     margin-left: 58%;
 }
 .step-2{
-    margin-top: 4%;
+    margin-top: -20%;
     margin-left: 58%;
     display: none;
 }
 .step-3{
     display: none;
-    margin-top: 6%;
+    margin-top: -18%;
     margin-left: 58%;
 }
 .step-4{
     display: none;
-    margin-top: 8%;
+    margin-top: -16%;
     margin-left: 58%;
 }
 .step-5{
     display: none;
-    margin-top: 10%;
+    margin-top: -14%;
     margin-left: 58%;
+}
+.strt-line{
+    height:20rem;
+    border-left:2px dotted blue;
+    margin-top: 2%;
+    margin-left: 50%;
 }
 .o-led .typewriter{
     animation: typewriter 4s steps(44) 1s 1 normal both,
@@ -252,9 +260,11 @@ body{
 }
 
 .button {
+    position: absolute;
     background: lightskyblue;
     display: inline-block;
-    margin: 0.3em;
+    margin: 1.3rem;
+    margin-top: 3rem;
     padding: 1rem 3rem;
     overflow: hidden;
     /* position: relative; */
@@ -280,7 +290,7 @@ body{
     box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
 }
 
-.but {
+/* .but {
     padding: 0.5rem 1rem;
     background: none;
     color: #fff;
@@ -301,11 +311,11 @@ body{
     text-decoration: none;
     color: #fff;
     box-shadow: 0 0 0 0.1rem #3dbeff;
-}
+} */
 
 .control-prev {
     position: absolute;
-    bottom: 1.3rem;
+    bottom: -2.6rem;
     left: 1.3rem;
 }
 .control-next {
