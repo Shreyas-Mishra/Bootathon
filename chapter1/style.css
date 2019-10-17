@@ -280,6 +280,29 @@ body{
     box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
 }
 
+.but {
+    padding: 0.5rem 1rem;
+    background: none;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border: 0.2rem solid #fff;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor:pointer;
+}
+
+.but:hover {
+    background: #3dbeff;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 0 0.1rem #3dbeff;
+}
+
 .control-prev {
     position: absolute;
     bottom: 1.3rem;
@@ -376,6 +399,12 @@ body{
 .scene-heading:hover {
     color: #eee;
 }
+.disLedger {
+    margin-top:1rem;
+}
+.disLedger.hidden {
+    display:none;
+}
 .disLedger-node {
     font-size: 0.8rem;
 }
@@ -396,4 +425,27 @@ body{
 .disledger-anims {
     height: 18rem;
     width: 100%;
-    position: relative;}
+    position: relative;
+}
+
+.newTrans {
+    position: relative;
+    z-index: 1;
+}
+
+.newTrans:after {
+    content: "New Valid Transaction";
+    position: absolute;
+    font-size: 0.5rem;
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.addTrans {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
