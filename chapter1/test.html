@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><img src="./img/Picture2.png" style="height: 40px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,9 +55,9 @@
             <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form> 
+            </form> -->
         </div>
-    </nav> -->
+    </nav>
     <!-- Navigation bar code ends -->
     <div class="container-fluid mt-4 mb-5">
         <div class="headingz mb-3">
@@ -69,7 +69,7 @@
             <div class="col-12">
                 <div id="chap-carasouel" class="carousel slide" data-interval="false" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item">
                             <div class="scene">
                                 <div class="scene-heading" data-toggle="tooltip" data-placement="right" title="It is an open, distributed ledger that can record transactions between two parties
                                 efficiently and in a verifiable and permanent way. For use as a distributed ledger,
@@ -78,7 +78,7 @@
                                     Open Ledger
                                 </div>
                                 <div class="o-led">
-                                    <button class="btn o-btn btnFloat" id="Show">Start</button>
+                                    <button class="btn o-btn" id="Show">Start</button>
                                     <button class="btn o-btn" style="display: none;" id="pagain">Restart</button>
                                     <button class="btn o-btn disabled" id="b1">Create Genesis Block</button>
                                     <button class="btn o-btn" style="display: none;" id="b2">Create
@@ -103,26 +103,11 @@
                                                 <div id="block-3">B-->C $30</div><i class="fas fa-link " id="c-fas"></i>
                                                 <div id="block-4">C-->D $10</div>
                                         </div>
-                                    <div class="step-1 instructions typewriter">
-                                       1. The rpocess starts.
                                     </div>
-                                    <div class="step-2 instructions typewriter">
-                                       2. $100 are given to the user-a.
-                                    </div>
-                                    <div class="step-3 instructions typewriter">
-                                       3. $50 are given to the user-b by user-a.
-                                    </div>
-                                    <div class="step-4 instructions typewriter">
-                                        4. Line 4 jo bhi ho rkhlo hm dekh lenge
-                                     </div>
-                                     <div class="step-5 instructions typewriter">
-                                        5.Line 5 bhi achi h ab kya kre mene liookhi hai
-                                     </div>
 
                                 </div>
-                                </div>
                             </div>
-                            <div class="carousel-item ">
+                            <div class="carousel-item active">
                                 <div class="scene">
                                     <div class="scene-heading">
                                         Distributed Ledger
@@ -299,10 +284,10 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="control-prev button" href="#chap-carasouel" role="button" data-slide="prev">
+                        <a class="control-prev but" href="#chap-carasouel" role="button" data-slide="prev">
                             Previous
                         </a>
-                        <a class="control-next button" href="#chap-carasouel" role="button" data-slide="next">
+                        <a class="control-next but" href="#chap-carasouel" role="button" data-slide="next">
                             Next
                         </a>
                     </div>
@@ -316,7 +301,6 @@
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="../js/jquery-3.4.1.js"></script>
-        <!-- <script src="../js/jquery-2.1.3.js"></script> -->
         <script src="../js/ajax-lib-popper-1.12.9.js"></script>
         <script src="../js/bootstrap-js-4.0.js"></script>
         <script src="https://kit.fontawesome.com/20246d5e04.js"></script>
@@ -328,7 +312,6 @@
                 $('#b1').removeClass("disabled");
                 $('#user-a').show(500);
                 $('#Hide').show(500);
-                $('.step-2').show(1000);
 
             });
             $('#b1').click(function () {
@@ -337,7 +320,6 @@
                 } else {
                     $('#b1').hide(90);
                     $('#b2').show(90);
-                $('.step-3').show(1000);
                     $('#block-1').show(500);
                 }
 
@@ -346,7 +328,6 @@
                 $('#a-fas').show(500);
                 $('#b2').hide(90);
 
-                $('.step-4').show(1000);
                 $('#user-b').show(1000);
                 $('#arrow-a').show(500);
                 $('#triangle-right').show(500);
@@ -356,7 +337,6 @@
             });
             $('#b3').click(function () {
                 $('#b3').hide(90);
-                $('.step-4').show(1000);
                 $('#b-fas').show(500);
                 $('#user-c').show(1000);
                 $('#arrow-b').show(500);
@@ -373,7 +353,6 @@
                 $('#block-4').show(500);
                 $('#Hide').show(500);
                 $('#Show').hide(100);
-                $('.step-5').show(1000);
                 $('#pagain').show(100);
             });
             $('#pagain').click(function () {
@@ -542,7 +521,7 @@
                 }).play();
                
             });
-            
+
         </script>
 
 </body>
