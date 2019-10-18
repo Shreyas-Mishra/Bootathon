@@ -134,6 +134,19 @@
                                     <div class="scene-heading">
                                         Distributed Ledger
                                     </div>
+                                    <div class="typewriter-container">
+                                        <b class="text-warning">* </b> A single block may contain multiple transactions, here we are taking only one trasnaction per block. 
+                                        <br />
+                                        <div class="etypewriter" id="disLedgerInfo1">
+                                            1. A new transaction is broadcasted.
+                                        </div>
+                                        <div class="etypewriter" id="disLedgerInfo2">
+                                            2. It is then sent to every node(miner) in the network.
+                                        </div>
+                                        <div class="etypewriter" id="disLedgerInfo3">
+                                            3. Every network adds it to thier ledger(chain) as a new block.
+                                        </div>
+                                    </div>
                                     <div class="disledger-anims" id="disledger-anims">
                                         <button id="newTrans" class="button addTrans">Add Transaction</button>
                                     </div>
@@ -221,50 +234,7 @@
                             </div>
                             <!-- ============================================== Distributed Ledger END ===================================================  -->
                             <!-- ============================================== MINING Start ===================================================  -->
-                            <style>
-                                .typewriter h5 {
-                                    display: none;
-                                    color: rgb(15, 15, 15);
-                                    font-family: monospace;
-                                    overflow: hidden;
-                                    /* Ensures the content is not revealed until the animation */
-                                    border-right: .15em solid orange;
-                                    /* The typwriter cursor */
-                                    white-space: nowrap;
-                                    /* Keeps the content on a single line */
-                                    margin: 0 auto;
-                                    /* Gives that scrolling effect as the typing happens */
-                                    letter-spacing: .15em;
-                                    /* Adjust as needed */
-                                    animation:
-                                        typing 3.5s steps(30, end),
-                                        blink-caret .5s step-end infinite;
-                                }
 
-                                /* The typing effect */
-                                @keyframes typing {
-                                    from {
-                                        width: 0
-                                    }
-
-                                    to {
-                                        width: 30%
-                                    }
-                                }
-
-                                /* The typewriter cursor effect */
-                                @keyframes blink-caret {
-
-                                    from,
-                                    to {
-                                        border-color: transparent
-                                    }
-
-                                    50% {
-                                        border-color: rgb(253, 253, 252)
-                                    }
-                                }
-                            </style>
                             <div class="carousel-item">
                                 <div class="scene">
                                     <div class="scene-heading">
@@ -296,30 +266,29 @@
                                                     <div class="block">
                                                         <h5>Block A</h5>
                                                         <hr>
-                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <p>Hash: <b>TyKNyX</b></p>
                                                         <hr>
-                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                        Prev Hash: <b>NULL</b>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
                                                     <div class="block">
                                                         <h5>Block B</h5>
                                                         <hr>
-                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <p>Hash: <b>qR6XeH</b></p>
                                                         <hr>
-                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                        Prev Hash: <b>TyKNyX</b>
                                                     </div>
                                                 </div>
                                                 <div class="col-4 opace">
                                                     <div class="block blockc" id="display_block">
                                                         <h5>Block C</h5>
                                                         <hr>
-                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <p>Hash: <b id="acHash">astawtawt</b></p>
                                                         <hr>
-                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                        Prev Hash: <b>qR6XeH</b>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                         <div class="col-4">
@@ -331,27 +300,27 @@
                                                     <div class="block">
                                                         <h5>Block A</h5>
                                                         <hr>
-                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <p>Hash: <b>TyKNyX</b></p>
                                                         <hr>
-                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                        Prev Hash: <b>NULL</b>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
                                                     <div class="block">
                                                         <h5>Block B</h5>
                                                         <hr>
-                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <p>Hash: <b>qR6XeH</b></p>
                                                         <hr>
-                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                        Prev Hash: <b>TyKNyX</b>
                                                     </div>
                                                 </div>
                                                 <div class="col-4 opace">
                                                     <div class="block blockc" id="mid-blockc">
                                                         <h5>Block C</h5>
                                                         <hr>
-                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <p>Hash: <b id="bcHash">astawtawt</b></p>
                                                         <hr>
-                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                        Prev Hash: <b>qR6XeH</b>
                                                     </div>
                                                 </div>
                                             </div>
@@ -365,27 +334,27 @@
                                                     <div class="block">
                                                         <h5>Block A</h5>
                                                         <hr>
-                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <p>Hash: <b>TyKNyX</b></p>
                                                         <hr>
-                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                        Prev Hash: <b>NULL</b>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
                                                     <div class="block">
                                                         <h5>Block B</h5>
                                                         <hr>
-                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <p>Hash: <b>qR6XeH</b></p>
                                                         <hr>
-                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                        Prev Hash: <b>TyKNyX</b>
                                                     </div>
                                                 </div>
                                                 <div class="col-4 opace">
-                                                    <div class="block blockc">
+                                                    <div class="block blockc" id="display_block">
                                                         <h5>Block C</h5>
                                                         <hr>
-                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <p>Hash: <b id="ccHash">astawtawt</b></p>
                                                         <hr>
-                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                        Prev Hash: <b>qR6XeH</b>
                                                     </div>
                                                 </div>
                                             </div>
@@ -578,8 +547,8 @@
                 left: '20%',
                 angle: 330,
             });
-            var chain = [];
 
+            var chain = [];
             $(document).ready(function () {
 
                 //mining code
@@ -597,6 +566,9 @@
 
 
                 $("#newTrans").click(() => {
+                    $("#disLedgerInfo1").show();
+                    $("#disLedgerInfo2").delay(1000).show(0);
+                    $("#disLedgerInfo3").delay(2000).show(0);
                     let width = $("#disledger-anims").width();
                     width = width > 1400 ? 1400 : width;
                     curve1.tune({
@@ -673,8 +645,6 @@
                     onRepeatComplete: () => {
                         if (nodeCounter++ % 2 == 1) return;
                         setTimeout(() => {
-                            timeline.setSpeed(1.0)
-                            timeline.playBackward()
                             firstHash = randString(6);
                             str = ' <div class="col-4"> \
                         <div class="card disLedger hidden" > \
@@ -689,11 +659,15 @@
                             </div> \
                         </div> \
                     </div>';
-                            chain.push(firstHash);
+                            chain.push(firstHash);                            
                             $(".nodes").append(str);
                             setTimeout(() => {
                                 $(".disLedger.hidden").fadeIn()
                             }, 200)
+                            setTimeout(() => {
+                                timeline.setSpeed(1.0)
+                                timeline.playBackward()
+                            }, 800)                           
                         }, 300);
                     }
                 });
@@ -710,10 +684,9 @@
                     );
 
             });
-
         </script>
         <script>
-            // more minercode:
+            //MINER CODE:
             $('#Show0').click(function () {
                 $('#Show1').show(400);
                 $('#type1').show(400);
@@ -728,28 +701,37 @@
                 $(this).prop('Counter', 0).animate({
                     Counter: 360
                 }, {
-                    duration: 10000,
+                    duration: 9000,
                     easing: 'swing',
                     step: function (now) {
                         val = Math.ceil(now);
                         let sec = val % 60;
                         let min = Math.floor(val / 60);
                         $(this).text(min + ":" + ("" + sec).padStart(2, "0"));
+                        $("#acHash").text(randString(6));
+                        $("#bcHash").text(randString(6));
+                        $("#ccHash").text(randString(6));
                     }
                 });
                 setTimeout(function () {
                     $("#done").tooltip('hide');
-                    $("#done").tooltip({ title: '<b style="color:#A9DFBF ">Done!</b>', html: true });
+                    $("#done").tooltip({ title: '<b style="color:#A9DFBF ">Done!</b>', html: true, trigger: 'manual' });
                     $("#done").tooltip('show');
-                    $("#mid-blockc").fadeTo("slow", 1)
-                }, 10000);
+                    $("#mid-blockc").fadeTo("slow", 1);
+                    $("#bcHash").html("<font class='text-danger'>00k8bG</font>");
+                }, 9100);
                 setTimeout(function () {
                     $(".confirm").tooltip('hide');
-                    $(".confirm").tooltip({ title: '<b style="color:yellow ">Confirm</b>', html: true });
+                    $(".confirm").tooltip({ title: '<b style="color:yellow ">Confirm</b>', html: true, trigger: 'manual' });
                     $(".confirm").tooltip('show');
-                    $(".blockc").fadeTo("slow", 1)
+                    $(".blockc").fadeTo("slow", 1);
+                    $("#acHash, #ccHash, #bcHash").html("<font class='text-danger'>00k8bG</font>");
+                    setTimeout(() => {
+                        $(".confirm").tooltip('hide');
+                        $("#done").tooltip('hide');
+                        $(".heading h3").tooltip('hide');
+                    }, 2000);
                 }, 12000);
-                // $("#done .tooltip-inner").style("background-color", "")
             });
         </script>
 
