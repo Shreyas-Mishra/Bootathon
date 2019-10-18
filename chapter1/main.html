@@ -69,6 +69,7 @@
             <div class="col-12">
                 <div id="chap-carasouel" class="carousel slide" data-interval="false" data-ride="carousel">
                     <div class="carousel-inner">
+                        <!-- ============================================== Ledger Start ===================================================  -->
                         <div class="carousel-item active">
                             <div class="scene">
                                 <div class="scene-heading" data-toggle="tooltip" data-placement="right" title="It is an open, distributed ledger that can record transactions between two parties
@@ -108,7 +109,7 @@
                                         </div>
                                         <div class="strt-line"></div>
                                         <div class="step-1 instructions typewriter">
-                                            1. The rpocess starts.
+                                            1. The process starts.
                                         </div>
                                         <div class="step-2 instructions typewriter">
                                             2. $100 are given to the user-a.
@@ -126,6 +127,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- ============================================== Ledger END ===================================================  -->
+                            <!-- ============================================== Distributed Ledger Start ===================================================  -->
                             <div class="carousel-item">
                                 <div class="scene">
                                     <div class="scene-heading">
@@ -216,14 +219,181 @@
 
                                 </div>
                             </div>
+                            <!-- ============================================== Distributed Ledger END ===================================================  -->
+                            <!-- ============================================== MINING Start ===================================================  -->
+                            <style>
+                                .typewriter h5 {
+                                    display: none;
+                                    color: rgb(15, 15, 15);
+                                    font-family: monospace;
+                                    overflow: hidden;
+                                    /* Ensures the content is not revealed until the animation */
+                                    border-right: .15em solid orange;
+                                    /* The typwriter cursor */
+                                    white-space: nowrap;
+                                    /* Keeps the content on a single line */
+                                    margin: 0 auto;
+                                    /* Gives that scrolling effect as the typing happens */
+                                    letter-spacing: .15em;
+                                    /* Adjust as needed */
+                                    animation:
+                                        typing 3.5s steps(30, end),
+                                        blink-caret .5s step-end infinite;
+                                }
+
+                                /* The typing effect */
+                                @keyframes typing {
+                                    from {
+                                        width: 0
+                                    }
+
+                                    to {
+                                        width: 30%
+                                    }
+                                }
+
+                                /* The typewriter cursor effect */
+                                @keyframes blink-caret {
+
+                                    from,
+                                    to {
+                                        border-color: transparent
+                                    }
+
+                                    50% {
+                                        border-color: rgb(253, 253, 252)
+                                    }
+                                }
+                            </style>
                             <div class="carousel-item">
                                 <div class="scene">
                                     <div class="scene-heading">
                                         Mining
                                     </div>
+                                    <!-- <div id="clock"></div> -->
+                                    <div id="shiva"><span class="count2"></div>
 
+                                    <button id="Show0" class="btn-class">Start</button>
+                                    <div class="typewriter">
+                                        <h5>Start the process..</h5>
+                                        <h5 id="type1">Click on transaction to send.</h5>
+                                        <h5 id="type2">Now all miners are finding correct hash.</h5>
+                                        <h5 id="type3">Miner B got the right hash ,miner b and miner c has confirmed
+                                        </h5>
+                                    </div>
+                                    <button class="btn-class" style="display: none;" id="Show1"
+                                        onclick="myfunction()">Transaction</button>
+
+                                    <div class="mining_animation"></div>
+                                    <br><br><br>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="heading confirm">
+                                                <h3 data-toggle="tooltip" title="Mining...">Miner A</h3>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="block">
+                                                        <h5>Block A</h5>
+                                                        <hr>
+                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <hr>
+                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="block">
+                                                        <h5>Block B</h5>
+                                                        <hr>
+                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <hr>
+                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 opace">
+                                                    <div class="block blockc" id="display_block">
+                                                        <h5>Block C</h5>
+                                                        <hr>
+                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <hr>
+                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="heading" id="done">
+                                                <h3 data-toggle="tooltip" title="Mining...">Miner B</h3>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="block">
+                                                        <h5>Block A</h5>
+                                                        <hr>
+                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <hr>
+                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="block">
+                                                        <h5>Block B</h5>
+                                                        <hr>
+                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <hr>
+                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 opace">
+                                                    <div class="block blockc" id="mid-blockc">
+                                                        <h5>Block C</h5>
+                                                        <hr>
+                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <hr>
+                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="heading confirm">
+                                                <h3 data-toggle="tooltip" title="Mining...">Miner C</h3>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="block">
+                                                        <h5>Block A</h5>
+                                                        <hr>
+                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <hr>
+                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="block">
+                                                        <h5>Block B</h5>
+                                                        <hr>
+                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <hr>
+                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 opace">
+                                                    <div class="block blockc">
+                                                        <h5>Block C</h5>
+                                                        <hr>
+                                                        <p>Hash: <b>astawtawt</b></p>
+                                                        <hr>
+                                                        Prev Hash: <b>astawtawt</b> <b>astawtawt</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- ============================================== MINING END ===================================================  -->
                         </div>
                         <a class="control-prev button" href="#chap-carasouel" role="button" data-slide="prev">
                             Previous
@@ -338,7 +508,6 @@
                 $('#block-2').hide(500);
                 $('#b2').hide(500);
                 $('#block-1').hide(500);
-
             });
 
 
@@ -412,7 +581,16 @@
             var chain = [];
 
             $(document).ready(function () {
+
+                //mining code
+                $(".heading h3").tooltip({ trigger: 'manual' });
                 $('[data-toggle="tooltip"]').tooltip();
+                $('#Show1').click(function () {
+                    $(".blockc").fadeTo("slow", 0.2)
+                    $(".heading h3").tooltip('show');
+                });
+
+                //distributed ledger code:
                 let firstHash = randString(6);
                 $(".firstHash").text(firstHash);
                 chain.push(firstHash);
@@ -533,6 +711,46 @@
 
             });
 
+        </script>
+        <script>
+            // more minercode:
+            $('#Show0').click(function () {
+                $('#Show1').show(400);
+                $('#type1').show(400);
+            });
+            $('#Show1').click(function () {
+                $('#type2').show(400);
+                $('#type3').show(400);
+            });
+            // buttton start to display Transaction and autotyper==============================================================================================================================================
+
+            var myfunction = () => $('.count2').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: 360
+                }, {
+                    duration: 10000,
+                    easing: 'swing',
+                    step: function (now) {
+                        val = Math.ceil(now);
+                        let sec = val % 60;
+                        let min = Math.floor(val / 60);
+                        $(this).text(min + ":" + ("" + sec).padStart(2, "0"));
+                    }
+                });
+                setTimeout(function () {
+                    $("#done").tooltip('hide');
+                    $("#done").tooltip({ title: '<b style="color:#A9DFBF ">Done!</b>', html: true });
+                    $("#done").tooltip('show');
+                    $("#mid-blockc").fadeTo("slow", 1)
+                }, 10000);
+                setTimeout(function () {
+                    $(".confirm").tooltip('hide');
+                    $(".confirm").tooltip({ title: '<b style="color:yellow ">Confirm</b>', html: true });
+                    $(".confirm").tooltip('show');
+                    $(".blockc").fadeTo("slow", 1)
+                }, 12000);
+                // $("#done .tooltip-inner").style("background-color", "")
+            });
         </script>
 
 </body>

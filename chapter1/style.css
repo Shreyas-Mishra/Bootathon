@@ -477,3 +477,82 @@ body{
     right: 2rem;
     top: 2rem;
 }
+
+
+
+/**********************Mining CSS Starts***********************/
+.col-4 h2,p,h3,h5,h6{
+    color:black;
+    text-align: justify;
+}
+.col-4 h3{
+    text-align: center;
+}
+.blockc{
+    opacity:0;
+}
+.btn-class{
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+     /* -moz-box-shadow: 4px 1px 18px -1px #276873; */
+     /* -webkit-box-shadow: 4px 1px 18px -1px #276873; */
+     box-shadow: 4px 1px 18px -1px #276873;
+     background-color: #599bb3;
+     -moz-border-radius: 17px;
+     border-radius: 17px;
+     margin: auto auto 11px auto;
+     cursor: pointer;
+     color: #ffffff;
+     font-family: Arial;
+     font-size: 15px;
+     font-weight: bold;
+     padding: 11px 24px;
+     display: block;
+     text-decoration: none;
+     text-shadow: 1px 0px 50px #3d768a;
+}
+.heading{
+    /* background-color: #387BEB; */
+    border: 0.5px solid black;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.col-4{
+    /* border: 0.5px solid black; */
+    /* background-color: #FAE5D3; */
+    display: grid;
+    grid-gap: 10px;
+}
+.block{
+    border-radius: 0.5rem;
+    background-color: #85C1E9;
+    text-align:center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.block h5{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+hr{
+    height: 100%;
+    color: solid black;
+}
+/********************MIning CSS Ends***************************/
+/**************************** Timer************************** */
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+#shiva {
+  font-family: 'Orbitron', sans-serif;
+  color: #2874A6 ;
+  font-size: 40px;
+  text-align: center;
+  float: right;
+  margin-top: -33px;
+}
+/******************************Timer******************************/
