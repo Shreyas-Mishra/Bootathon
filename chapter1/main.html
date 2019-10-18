@@ -98,10 +98,13 @@
                                         <div id="arrow-c"></div>
                                         <div id="triangle-left"></div>
                                         <div id="user-d" class="text-center">D</div>
-                                        <div id="block-1">A<--$100</div> <i class="fas fa-link " id="a-fas"></i>
-                                                <div id="block-2">A-->B $40</div><i class="fas fa-link " id="b-fas"></i>
-                                                <div id="block-3">B-->C $30</div><i class="fas fa-link " id="c-fas"></i>
-                                                <div id="block-4">C-->D $10</div>
+                                        <div id="block-1" class="text-center ">A<--$100</div> <i class="fas fa-link "
+                                                id="a-fas"></i>
+                                                <div id="block-2" class="text-center ">A-->B $40</div><i
+                                                    class="fas fa-link " id="b-fas"></i>
+                                                <div id="block-3" class="text-center ">B-->C $30</div><i
+                                                    class="fas fa-link " id="c-fas"></i>
+                                                <div id="block-4" class="text-center ">C-->D $10</div>
                                         </div>
                                         <div class="strt-line"></div>
                                         <div class="step-1 instructions typewriter">
@@ -129,7 +132,7 @@
                                         Distributed Ledger
                                     </div>
                                     <div class="disledger-anims" id="disledger-anims">
-                                        <button id="newTrans" class="but addTrans">Add Transaction</button>
+                                        <button id="newTrans" class="button addTrans">Add Transaction</button>
                                     </div>
                                     <div class="row">
                                         <div class="col-4">
@@ -416,6 +419,16 @@
 
 
                 $("#newTrans").click(() => {
+                    let width = $("#disledger-anims").width();
+                    width = width > 1400 ? 1400 : width;
+                    curve1.tune({
+                        radius: 0.171 * width,
+                        radiusY: 0.1469426751 * width
+                    });
+                    curve2.tune({
+                        radius: 0.171 * width,
+                        radiusY: 0.1469426751 * width
+                    });
                     timeline.play()
 
                 })
@@ -480,8 +493,8 @@
                     speed: 0.8,
                     backwardEasing: 'cubic.out',
                     onRepeatComplete: () => {
-                        if(nodeCounter++ % 2 == 1)return;
-                        setTimeout(() => {                           
+                        if (nodeCounter++ % 2 == 1) return;
+                        setTimeout(() => {
                             timeline.setSpeed(1.0)
                             timeline.playBackward()
                             firstHash = randString(6);

@@ -126,44 +126,62 @@ body{
     font-size: 2rem;
 }
 .o-led #block-1{
+    line-height: 30px;
     display: none;
+    color: white;
     position: absolute;
+    border-radius: 5px;
     height: 2rem;
     width: 7rem;
     margin-top: 8rem;
     margin-left: 10rem;
     background: #73d2f3;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: 2px 2px 2px grey;
 }
 .o-led #block-2{
     display: none;
+    color: white;
     position: absolute;
+    line-height: 30px;
     height: 2rem;
     width: 7rem;
     margin-top: 11rem;
     margin-left: 10rem;
     background: #73d2f3;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px grey;
+    border-radius: 5px;
+
+    /* border: 1px solid black; */
 }
 .o-led #block-3{
     display: none;
+    line-height: 30px;
     position: absolute;
+    color: white;
     height: 2rem;
     width: 7rem;
     margin-top: 14rem;
     margin-left: 10rem;
     background: #73d2f3;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px grey;
+    border-radius: 5px;
+
+    /* border: 1px solid black; */
 }
 .o-led #block-4{
     display: none;
     position: absolute;
     height: 2rem;
+    line-height: 30px;
     width: 7rem;
     margin-top: 17rem;
     margin-left: 10rem;
+    color: white;
     background: #73d2f3;
-    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
+    /* border: 1px solid black; */
 }
 .o-led #a-fas{
     /* font-size: 1.5rem; */
@@ -315,12 +333,12 @@ body{
 
 .control-prev {
     position: absolute;
-    bottom: -2.6rem;
+    bottom: .4rem;
     left: 1.3rem;
 }
 .control-next {
     position: absolute;
-    bottom: 1rem;
+    bottom: .4rem;
     right: 1rem;
 }
 .headingz {
@@ -384,7 +402,7 @@ body{
 
 .scene {
     width: 100%;
-    min-height: 35rem;
+    min-height: 38rem;
     position: relative;
     padding:1rem;
     padding-bottom:5rem;
