@@ -71,7 +71,7 @@ d)	None of the above <br></b>
 
 
 ##### 2.5 Conclusion:
-<dd>In this experiment user has learn't the 3 main features of block chain. 
+<dd>In this experiment user has learn't about the 3 main features of block chain. 
 </dd>
 
 ##### 2.6 Equations/formulas: NA
