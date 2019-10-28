@@ -78,10 +78,10 @@ d)	None of the above <br></b>
 
 
 ### 3. Flowchart
-<img src="flowchart/flowchart.PNG" alt="Flow Chart Image here"/>
+<img src="flowchart/flowchart.png" alt="Flow Chart Image here"/>
 
 ### 4. Mindmap
-<img src="mindmap/mindmap.png" alt="mindmap Image here"/>
+<img src="mindmap/mindmap.jpg" alt="mindmap Image here"/>
  
 ### 5. Storyboard 
 <img src="storyboard/storyboard.gif" alt="Gif here">
