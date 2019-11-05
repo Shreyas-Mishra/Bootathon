@@ -11,9 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./css/bootstrap-4.0.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <title>BlockChains</title>
 </head>
 
@@ -275,8 +277,47 @@
                                             3. Every network adds it to thier ledger(chain) as a new block.
                                         </div>
                                     </div>
+                                    <style>
+                                        #newTrans {
+                                            position: absolute;
+                                            left: 50%;
+                                            top: 40%;
+                                            width: 9rem;
+                                            height: 5rem;
+                                            line-height: 4rem;
+                                            transform: translate(-50%, -50%);
+                                            display: none;
+                                        }
+
+                                        #transLineSide {
+                                            position: absolute;
+                                            left: 50%;
+                                            top: 90%;
+                                            display: none;
+                                            width: 70%;
+                                            height: 90%;
+                                            background: none;
+                                            border: 0.1rem solid green;
+                                            border-radius: 5rem;
+                                            transform: translate(-50%, -50%);
+                                        }
+
+                                        #transLineMid {
+                                            position: absolute;
+                                            left: 50%;
+                                            top: 40%;
+                                            height: 90%;
+                                            width: 0.15rem;
+                                            background: green;
+                                            display: none;
+                                        }
+                                    </style>
                                     <div class="disledger-anims" id="disledger-anims">
-                                        <button id="newTrans" class="button addTrans">Add Transaction</button>
+                                        <button id="addTrans" class="button addTrans">Add Transaction</button>
+                                        <div id="transLineSide"></div>
+                                        <div id="transLineMid"></div>
+                                        <div class="btn btn-success" id="newTrans">New Transaction</div>
+
                                     </div>
                                     <div class="row">
                                         <div class="col-4">
@@ -363,6 +404,45 @@
                             <!-- ============================================== Distributed Ledger END ===================================================  -->
                             <!-- ============================================== MINING Start ===================================================  -->
 
+
+                            <!-- 1st modal1 starts here-->
+                            <div class="modal fade" id="exampleModalCenter1" tabindex="10" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document" style="z-index: 50;">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Start</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Process starts...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of 1st modal -->
+                            <!-- 2nd modal -->
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="10" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="z-index: 10000;">
+                                <div class="modal-dialog modal-dialog-centered" role="document" style="z-index: 55550;">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Transaction</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Now transaction will come to all the miners and the first miner which finds
+                                            the correct hash will display done first and others confirms the hash.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of second modal -->
                             <div class="carousel-item">
                                 <div class="scene">
                                     <div class="scene-heading">
@@ -370,8 +450,8 @@
                                     </div>
                                     <!-- <div id="clock"></div> -->
                                     <div id="shiva"><span class="count2"></div>
-
-                                    <button id="Show0" class="btn-class">Start</button>
+                                    <button id="Show0" class="btn-class" type="button" data-toggle="modal"
+                                        data-target="#exampleModalCenter1">Start</button>
                                     <div class="typewriter">
                                         <h5>Start the process..</h5>
                                         <h5 id="type1">Click on transaction to send.</h5>
@@ -379,15 +459,16 @@
                                         <h5 id="type3">Miner B got the right hash ,miner b and miner c has confirmed
                                         </h5>
                                     </div>
-                                    <button class="btn-class" style="display: none;" id="Show1"
-                                        onclick="myfunction()">Transaction</button>
-
+                                    <button class="btn-class" style="display: none;" id="Show1" onclick="myfunction()"
+                                        type="button" data-toggle="modal"
+                                        data-target="#exampleModalCenter">Transaction</button>
                                     <div class="mining_animation"></div>
                                     <br><br><br>
                                     <div class="row">
                                         <div class="col-4">
                                             <div class="heading confirm">
-                                                <h3 data-toggle="tooltip" title="Mining...">Miner A</h3>
+                                                <h3 data-toggle="tooltip" title="Mining..." style="z-index: 0;">Miner A
+                                                </h3>
                                             </div>
                                             <div class="row">
                                                 <div class="col-4">
@@ -505,17 +586,12 @@
                 </div> -->
             </div>
         </div>
-
-        <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="./js/jquery-3.4.1.js"></script>
-        <!-- <script src="../js/jquery-2.1.3.js"></script> -->
         <script src="./js/ajax-lib-popper-1.12.9.js"></script>
         <script src="./js/bootstrap-js-4.0.js"></script>
         <script src="https://kit.fontawesome.com/20246d5e04.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
         <script>
-
             function randString(length) {
                 var result = '';
                 var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -531,7 +607,6 @@
                 $('#user-a').show(500);
                 $('#Hide').show(500);
                 $('.step-1').show(1000);
-                // $('#myModal').modal(options)
 
             });
             $('#b1').click(function () {
@@ -610,74 +685,6 @@
             });
 
 
-            const y = -35;
-
-            class Sparks extends mojs.CustomShape {
-                getShape() { return '<path d="M11.8274713,76.9078071 C11.8274713,76.9078071 2.16693973,42.95046 30.0687526,21.2517012"></path><path d="M25.7538383,77.4836394 C25.7538383,77.4836394 20.7413252,19.6928312 92.8457655,18.1298659"></path><path d="M29.8949928,85.1781099 C29.8949928,85.1781099 41.4904038,48.3985179 81.1308462,59.416066"></path>'; }
-            }
-            mojs.addShape('sparks', Sparks);
-
-
-            const newTransaction = new mojs.Transit({
-                shape: 'rect',
-                stroke: "#7ed090",
-                strokeWidth: 40,
-                angle: { '-240': 0 },
-                className: 'newTrans',
-                radius: 20,
-                parent: '#disledger-anims',
-                scale: { 0: 2 },
-                duration: 872,
-                fill: 'none',
-                easing: 'expo.out',
-                y
-            });
-
-            const SPARKS_OPTS = {
-                shape: 'sparks',
-                parent: newTransaction.el,
-                radius: 15,
-                left: '130%',
-                top: '25%',
-                fill: 'none',
-                strokeWidth: { 10: 0 },
-                stroke: 'yellow',
-                strokeDasharray: '75',
-                strokeDashoffset: { '75': '-75' },
-                duration: 900,
-                easing: 'cubic.out',
-                strokeLinecap: 'round',
-                isForce3d: true
-            }
-
-            const sparks1 = new mojs.Shape({
-                ...SPARKS_OPTS,
-                left: '125%',
-                top: '25%',
-                angle: 80,
-            });
-
-            const sparks2 = new mojs.Shape({
-                ...SPARKS_OPTS,
-                top: '125%',
-                left: '80%',
-                angle: 165,
-            });
-
-            const sparks3 = new mojs.Shape({
-                ...SPARKS_OPTS,
-                top: '75%',
-                left: '-25%',
-                angle: 250,
-            });
-
-            const sparks4 = new mojs.Shape({
-                ...SPARKS_OPTS,
-                top: '-25%',
-                left: '20%',
-                angle: 330,
-            });
-
             var chain = [];
             $(document).ready(function () {
 
@@ -688,95 +695,20 @@
                     $(".blockc").fadeTo("slow", 0.2)
                     $(".heading h3").tooltip('show');
                 });
-
                 //distributed ledger code:
                 let firstHash = randString(6);
+                
                 $(".firstHash").text(firstHash);
                 chain.push(firstHash);
-
-
-                $("#newTrans").click(() => {
+                $("#addTrans").click(() => {
                     $("#disLedgerInfo1").show();
-                    $("#disLedgerInfo2").delay(1000).show(0);
-                    $("#disLedgerInfo3").delay(2000).show(0);
-                    let width = $("#disledger-anims").width();
-                    width = width > 1400 ? 1400 : width;
-                    curve1.tune({
-                        radius: 0.171 * width,
-                        radiusY: 0.1469426751 * width
-                    });
-                    curve2.tune({
-                        radius: 0.171 * width,
-                        radiusY: 0.1469426751 * width
-                    });
-                    timeline.play()
-
-                })
-
-                let width = $("#disledger-anims").width();
-                width = width > 1400 ? 1400 : width;
-                curve1 = new mojs.Shape({
-                    shape: 'curve',
-                    points: 11,
-                    radius: 0.171 * width,
-                    radiusY: 0.1469426751 * width,
-                    left: '40%',
-                    top: '13rem',
-                    angle: -30,
-                    fill: 'none',
-                    stroke: '#7ed090',
-                    parent: '#disledger-anims',
-                    isShowStart: true,
-                    strokeDasharray: '100%',
-                    strokeDashoffset: { '-100%': '0', easing: 'cubic.in' },
-                    duration: 2000,
-                    repeat: 0
-                });
-
-                curve2 = new mojs.Shape({
-                    shape: 'curve',
-                    points: 11,
-                    radius: 0.171 * width,
-                    radiusY: 0.1469426751 * width,
-                    left: '60%',
-                    top: '13rem',
-                    angle: 30,
-                    fill: 'none',
-                    stroke: '#7ed090',
-                    parent: '#disledger-anims',
-                    isShowStart: true,
-                    strokeDasharray: '100%',
-                    strokeDashoffset: { '100%': '0', easing: 'cubic.in' },
-                    duration: 2000,
-                    repeat: 0
-                });
-
-                curve3 = new mojs.Shape({
-                    shape: 'curve',
-                    points: 1,
-                    radius: 100,
-                    radiusY: 0.1,
-                    left: '50%',
-                    top: '14rem',
-                    angle: 90,
-                    fill: 'none',
-                    stroke: '#7ed090',
-                    parent: '#disledger-anims',
-                    isShowStart: true,
-                    strokeDasharray: '100%',
-                    strokeDashoffset: { '100%': '0', easing: 'cubic.in' },
-                    duration: 2000,
-                    repeat: 0
-                });
-                let nodeCounter = 0;
-                const timeline = new mojs.Timeline({
-                    speed: 0.8,
-                    backwardEasing: 'cubic.out',
-                    onRepeatComplete: () => {
-                        if (nodeCounter++ % 2 == 1) return;
-                        setTimeout(() => {
-                            firstHash = randString(6);
-                            str = ' <div class="col-4"> \
+                    $("#newTrans").delay(150).fadeIn(600);
+                    $("#addTrans").prop('disabled', true)                                     
+                    $("#disLedgerInfo2").delay(2100).show(0);
+                    $("#transLineMid").delay(2500).fadeIn(600); 
+                    $("#transLineSide").delay(2500).fadeIn(700, function () {
+                        firstHash = randString(6);
+                        str = ' <div class="col-4"> \
                         <div class="card disLedger hidden" > \
                             <div class="card-header"> \
                                 Hash: <b>'+ firstHash + '</b> \
@@ -789,30 +721,20 @@
                             </div> \
                         </div> \
                     </div>';
-                            chain.push(firstHash);
-                            $(".nodes").append(str);
-                            setTimeout(() => {
-                                $(".disLedger.hidden").fadeIn()
-                            }, 200)
-                            setTimeout(() => {
-                                timeline.setSpeed(1.0)
-                                timeline.playBackward()
-                            }, 800)
-                        }, 300);
-                    }
-                });
-                timeline
-                    .add(
-                        newTransaction,
-                        sparks1,
-                        sparks2,
-                        sparks3,
-                        sparks4,
-                        curve1,
-                        curve2,
-                        curve3
-                    );
+                        chain.push(firstHash);
+                        $(".nodes").append(str);
+                        setTimeout(() => {
+                            $(".disLedger.hidden").fadeIn(700)
+                        }, 2000)
+                        $("#disLedgerInfo3").delay(1600).show(0);
+                        setTimeout(() => {
+                            $("#transLineSide, #transLineMid").fadeOut(300)
+                            $("#newTrans").delay(400).fadeOut(700);
+                            $("#addTrans").prop('disabled', false)
+                        }, 3000);
 
+                    });
+                });                
             });
         </script>
         <script>
@@ -823,7 +745,7 @@
             });
             $('#Show1').click(function () {
                 $('#type2').show(400);
-                $('#type3').show(400);
+                $('#type3').show(10000);
             });
             // buttton start to display Transaction and autotyper==============================================================================================================================================
 
@@ -863,6 +785,9 @@
                     }, 2000);
                 }, 12000);
             });
+            $('.popover-dismiss').popover({
+                trigger: 'focus'
+            })
         </script>
 
 </body>
